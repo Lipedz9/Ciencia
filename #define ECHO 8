@@ -1,0 +1,35 @@
+#define ECHO 8
+#define TRIGER 9
+ int distancia, duracao;
+
+ #include <LiquidCrystal.h>
+ LiquidCrystal lcd (12, 11, 5, 4, 3, 2);
+
+ void setup()
+ {
+   lcd.begin(16,2);
+   pinMode(TRIGER, OUTPUT);
+   pinMode(ECHO, INPUT);
+   lcd.print("distancia");
+ }
+  void loop()
+ {
+   lcd.setCursor(3, 1);
+   ultra();
+   duracao = pulseIn(ECHO, HIGH);
+   distancia = (0.0340 * duracao) / 2;
+
+   lcd.print ("cm: ");
+   lcd.print (distancia);
+   delay(500);
+   lcd.print("  ");
+  }
+
+   void ultra()
+  {
+   digitalWrite(TRIGER, HIGH);
+   delayMicroseconds(10);
+   digitalWrite(TRIGER, LOW);
+  }
+
+    

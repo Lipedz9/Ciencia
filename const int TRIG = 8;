@@ -1,0 +1,50 @@
+const int TRIG = 8;
+const int ECHO = 7;
+
+float distancia = 0;
+
+int RGB [] = {9,10,11};
+
+void setup() {
+for(int i = 0; i < 2; i++)
+{
+  pinMode(LEDBRG[i], OUTPUT);
+}
+    Serial.begin(9600);
+    pinMode(TRIG, OUTPUT);
+    pinMode(ECHO, INPUT);
+}
+ 
+void loop(){
+
+    disparo();
+    distancia = pulseIn(ECHO, HIGH);
+
+    distancia = (distancia * 0.000340) / 2;
+    Serial.print("CM: ");
+    Serial. println(distancia);
+}
+if (distancia < 50);
+RGB(0, 0,255)
+  else if (distancia < 1.50);
+  RGB (0,255,0);
+  else {
+RGB (0,0,255)
+}
+
+
+
+
+void  RGB (int R, int G, int B)
+{
+  analogWrite(11, R);
+  analogWrite(9, G);
+  analogWrite(10, B);
+}
+void disparo()
+{
+    digitalWrite(TRIG, HIGH);
+    delayMicroseconds(500);
+    digitalWrite(TRIG, LOW);
+   
+}
