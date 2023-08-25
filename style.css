@@ -3,7 +3,10 @@ body{
 }
 h1{
     color: aquamarine;
+    text-transform: uppercase;
+    text-align: center;
 }
 p{
     color: white;
+    text-align: center;
 }
