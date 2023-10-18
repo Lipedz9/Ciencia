@@ -1,0 +1,91 @@
+html,body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:linear-gradient(135deg,#9F44D3,#E2B0FF) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 16px !important;
+}
+#cabecalho{
+    background-color: #660ab6;
+    height: 8%;
+    margin-bottom: 1.25em;
+}
+
+/* Estilos para a div do formulário */
+#form_ad {
+    width: 23%;
+    min-width: 195px;
+    margin-top: 0.20em;
+    padding: 0;
+    border: 1px solid linear-gradient(to bottom,#9F44D3,#E2B0FF);
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: width 0.5s;
+    position:absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    
+}
+#inputs {
+    padding: 1.25em;
+}
+/* Estilos para o cabeçalho da div do formulário */
+#headerForm {
+    background-color: #660ab6;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0.625em;
+}
+
+/* Estilos para a tabela*/
+#tabela {
+    background-color: blue;
+    width: 80%;
+    height: 70%;
+    border-radius:0 0 10px 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.5s, transform 0.5s;
+}
+#tabela.move {
+    transform: translateX(-30%);
+}
+#headertable {
+    background-color: #8a3ac0;
+    color: black;
+    width: 80%;
+    border-radius:10px 10px 0 0;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: width 0.5s, transform 0.5s;
+}
+#headertable.move {
+    transform: translateX(-30%);
+}
+#grupo-botao{
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    body{
+        font-size: 14px !important;
+    }
+    #cabecalho {
+        height: 10%;
+    }
+}
